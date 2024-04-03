@@ -8,23 +8,15 @@ Create two functions : launchBrowser, runTests where,
  - Print the values
 Call that function from the javascript */
 
-let browserName = 'chrome';
-let testType = 'sanity';
-function launchBrowser(){
+function launchBrowser(browserName){
     if(browserName==="chrome"){
        console.log(browserName);
     }
-    else if(browserName==="safari"){
-        console.log(browserName);
-    }
-    else if(browserName==="firefox"){
-        console.log(browserName);
-    }
     else{
-        console.log('Unsupported Browser - if elseif condition');
+        console.log('Unsupported Browser - if else if condition');
     }
 }
-function runTests(){
+function runTests(testType){
     switch(testType){
         case 'smoke':
             console.log(testType);
@@ -40,5 +32,8 @@ function runTests(){
             break;
     }
 }
-launchBrowser();
-runTests();
+launchBrowser('chrome');
+runTests('sanity');
+
+launchBrowser('opera');
+runTests('smoke');
